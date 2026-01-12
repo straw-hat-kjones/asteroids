@@ -22,10 +22,11 @@ def main():
         
         log_state()
         screen.fill("black")
+        player.draw(screen)
+        player.update(dt)
         pygame.display.flip()
         dt = clock.tick(60) / 1000  # Delta time in seconds
         #print(f"Frame Time: {dt:.4f} seconds")
-        player.draw(screen)
     #print(f"Event logged: {event_type} with details {details}")
     import json
     
