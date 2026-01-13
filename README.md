@@ -12,7 +12,7 @@ A classic Asteroids arcade game clone built with Python and pygame.
 ```bash
 # Clone the repository
 git clone <repo-url>
-cd Me_Asteroids
+cd asteroids
 
 # Install dependencies with uv
 uv sync
