@@ -3,7 +3,10 @@ SCREEN_HEIGHT = 720
 PLAYER_RADIUS = 20
 LINE_WIDTH = 2
 PLAYER_TURN_SPEED = 300
-PLAYER_SPEED = 200
+PLAYER_SPEED = 200  # Legacy, kept for reference
+PLAYER_ACCELERATION = 300
+PLAYER_MAX_SPEED = 400
+PLAYER_FRICTION = 0.98
 ASTEROID_MIN_RADIUS = 20
 ASTEROID_KINDS = 3
 ASTEROID_SPAWN_RATE_SECONDS = 0.8
@@ -11,3 +14,39 @@ ASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS
 SHOT_RADIUS = 5
 PLAYER_SHOOT_SPEED = 500
 PLAYER_SHOOT_COOLDOWN_SECONDS = 0.3
+
+# Scoring
+SCORE_SMALL = 100    # Smallest asteroids (ASTEROID_MIN_RADIUS)
+SCORE_MEDIUM = 50    # Medium asteroids
+SCORE_LARGE = 20     # Largest asteroids
+COMBO_TIMEOUT = 2.0  # Seconds before combo resets
+COMBO_MAX = 10       # Maximum combo multiplier
+
+# Lives
+STARTING_LIVES = 3
+RESPAWN_INVINCIBILITY = 2.0  # Seconds of invincibility after respawn
+RESPAWN_BLINK_RATE = 0.1     # Blink rate during invincibility
+
+# Bombs
+BOMB_RADIUS = 10
+BOMB_EXPLOSION_RADIUS = 150
+BOMB_FUSE_TIME = 2.0
+BOMB_STARTING_COUNT = 3
+
+# Laser
+LASER_MAX_LENGTH = 800
+LASER_WIDTH = 3
+LASER_DAMAGE_INTERVAL = 0.1  # Damage tick rate in seconds
+
+# Power-ups
+POWERUP_RADIUS = 15
+POWERUP_LIFETIME = 10.0  # Seconds before disappearing
+POWERUP_DROP_CHANCE = 0.3  # 30% chance on asteroid destroy
+POWERUP_SPAWN_RATE = 15.0  # Seconds between random spawns
+
+# Shield power-up
+SHIELD_DURATION = 5.0
+
+# Speed power-up
+SPEED_BOOST_DURATION = 5.0
+SPEED_BOOST_MULTIPLIER = 1.5
