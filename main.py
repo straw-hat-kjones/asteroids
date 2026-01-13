@@ -44,6 +44,13 @@ def main():
                 # Handle collision (e.g., end game, reduce health, etc.)
                 print("Game over!")
                 sys.exit()
+            for shot in shots:
+                if shot.collide_with(obj):
+                    log_event("asteroid_shot", asteroid_pos=[obj.position.x, obj.position.y], shot_pos=[shot.position.x, shot.position.y])
+                    obj.split()
+                    obj.kill()
+                    shot.kill()
+                    break
         #player.draw(screen)
         for obj in drawable:
             obj.draw(screen)
